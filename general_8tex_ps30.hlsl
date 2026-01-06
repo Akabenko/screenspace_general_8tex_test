@@ -30,7 +30,7 @@ half4 main(PS_IN i) : COLOR
         if (uv.x < s)   out_rgb(Tex1, small_uv);
         if (uv.x < s_2) out_rgb(Tex2, small_uv);
         if (uv.x < s_3) out_rgb(Tex3, small_uv);
-                        out_rgb(Tex4, small_uv );
+                        out_rgb(Tex4, small_uv);
     }
 
     if (uv.x > s_3) {
@@ -43,7 +43,7 @@ half4 main(PS_IN i) : COLOR
     uv *= inv_s_3;
     uv.x = frac(uv.x);
 
-    out_rgb(BaseTexture, uv );
+    out_rgb(BaseTexture, uv);
 }
 
 /* 
