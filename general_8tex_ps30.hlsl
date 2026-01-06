@@ -34,8 +34,8 @@ half4 main(PS_IN i) : COLOR
     }
 
     if (uv.x > s_3) {
-        if (uv.y < s)   out_rgb(Tex5, small_uv);
-        if (uv.y < s_2) out_rgb(Tex6, small_uv);
+        if (uv.y < s_2)   out_rgb(Tex5, small_uv);
+        if (uv.y < s_3) out_rgb(Tex6, small_uv);
                         out_rgb(Tex7, small_uv);
     }
     
