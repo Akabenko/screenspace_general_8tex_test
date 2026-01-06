@@ -25,7 +25,6 @@ half4 main(PS_IN i) : COLOR
 {
     float2 uv = i.vTexCoord;
     float2 small_uv = frac(uv * inv_s);
-    float2 p = i.pos;
     
     if (uv.y < s) {
         if (uv.x < s)   out_rgb(Tex1, small_uv);
