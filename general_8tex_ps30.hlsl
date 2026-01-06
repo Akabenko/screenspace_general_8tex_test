@@ -25,18 +25,18 @@ half4 main(PS_IN i) : COLOR
 {
     float2 uv = i.vTexCoord;
     float2 small_uv = frac(uv * inv_s);
-    
+
     if (uv.y < s) {
         if (uv.x < s)   out_rgb(Tex1, small_uv);
         if (uv.x < s_2) out_rgb(Tex2, small_uv);
         if (uv.x < s_3) out_rgb(Tex3, small_uv);
-        out_rgb(Tex4, small_uv );
+                        out_rgb(Tex4, small_uv );
     }
 
     if (uv.x > s_3) {
-        if (uv.y < s)    out_rgb(Tex5, small_uv);
-        if (uv.y < s_2)  out_rgb(Tex6, small_uv);
-        out_rgb(Tex7, small_uv);
+        if (uv.y < s)   out_rgb(Tex5, small_uv);
+        if (uv.y < s_2) out_rgb(Tex6, small_uv);
+                        out_rgb(Tex7, small_uv);
     }
     
     uv.y -= s;
